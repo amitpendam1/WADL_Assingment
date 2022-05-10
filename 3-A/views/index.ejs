@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Website</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">	
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+   <script src="index.js"></script> 
+   <link
+    rel=
+"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"
+    type="text/css"
+  />
+  <script src=
+"https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script
+    src=
+"https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"
+    type="text/javascript"
+  ></script>
+  <script src=
+"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  
+  <script src=
+"https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.2.2/Chart.min.js"></script>
+  <script>
+      var ctx = document.getElementById("myChart").getContext('2d');
+var myChart = new Chart(ctx, {
+type: 'bar',
+data: {
+labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
+datasets: [{
+label: '# of Votes',
+data: [12, 19, 3, 5, 2, 3],
+backgroundColor: [
+'rgba(255, 99, 132, 0.2)',
+'rgba(54, 162, 235, 0.2)',
+'rgba(255, 206, 86, 0.2)',
+'rgba(75, 192, 192, 0.2)',
+'rgba(153, 102, 255, 0.2)',
+'rgba(255, 159, 64, 0.2)'
+],
+borderColor: [
+'rgba(255,99,132,1)',
+'rgba(54, 162, 235, 1)',
+'rgba(255, 206, 86, 1)',
+'rgba(75, 192, 192, 1)',
+'rgba(153, 102, 255, 1)',
+'rgba(255, 159, 64, 1)'
+],
+borderWidth: 1
+}]
+},
+options: {
+scales: {
+yAxes: [{
+ticks: {
+beginAtZero: true
+}
+}]
+}
+}
+});
+  </script>
+</head>
+<style>
+#shiva
+{
+ margin:auto;
+background: red;
+-moz-border-radius: 50px;
+-webkit-border-radius: 50px;
+
+
+}
+.count
+{
+  line-height: 100px;
+  color:white;
+  margin-left:30px;
+  font-size:25px;
+}
+/* The side navigation menu */
+.sidenav {
+  height: 100%; /* 100% Full-height */
+  width: 0; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Stay on top */
+  top: 0; /* Stay at the top */
+  left: 0;
+  background-color: #111; /* Black*/
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 60px; /* Place content 60px from the top */
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+
+/* The navigation menu links */
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#main {
+  transition: margin-left .5s;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+</style>
+<body>
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="#summary">Summary</a>
+  <a href="#admissions">Admissions</a>
+  <a href="#placement">Placement Trends</a>
+  <a href="#results">Placement Results</a>
+</div>
+
+<!-- Use any element to open the sidenav -->
+<!--<span onclick="openNav()">open</span> -->
+<a href="#" onclick="openNav()"><i class="fa fa-bars fa-2x" style="color:black;position:sticky;top:5px;left:5px"></i></a>
+<!--<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+  <ul class="navbar-nav">
+    <li class="nav-item">
+      <a class="nav-link active" href="#">Home</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="admissions.html">Admissions</a>	
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="results.html">Results</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="placements.html">Placements</a>
+    </li>
+  </ul>
+</nav>	
+-->
+<div id="main" style="margin-left:5%">
+<center>
+<h1>STAR College Dashboard<h1>
+<h2>Welcome!!</h2>
+</center>
+<img src="https://images.unsplash.com/photo-1562774053-701939374585?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8Y29sbGVnZXxlbnwwfHwwfHw%3D&w=1000&q=80" style="width:100%">
+<center>
+<h1 style="margin-top:5%">Summary</h1>
+<div class="card" id="summary">
+  <div class="card-body">
+
+	<div class="row">
+		<div class="col-md-3" id="shiva">Companies visited<span class="count">200</span></div>
+		<div class="col-md-3" id="shiva">Admissions this years<span class="count">1000</span></div>
+		<div class="col-md-3" id="shiva">Students placed<span class="count">853</span></div>
+	</div>
+  </div>
+</div>
+<div style="clear:both"></div>
+</center>
+<br />
+<br />
+<br />
+<div class="card" id="admissions">
+  <div class="card-body">
+	<div class="row">
+		<!--<div class="col-md-3"></div>-->
+		<div class="col-md-6">
+		<center>
+		  <h1>Analysis for Admissions:</h1>
+		  <p style="margin-top:2%"> Following the general trends, all seats of CS and IT are filled up. Civil admissions dropped by 5%. ENTC admission saw a rise in admissions with over 200 students taking admission. A rise of 10%. </p>
+		 </center>
+		</div>
+		<div class="col-md-6">
+		  <canvas id="myChart"></canvas>
+		</div>
+		<!--<div class="col-md-3"></div>-->
+	</div>
+  </div>
+</div>
+<!--<div class="row" style="margin-top:3%">
+	<div class="col-md-3"></div>
+	<div class="col-md-6">
+	  <canvas id="myChart"></canvas>
+	</div>
+	<div class="col-md-3"></div>
+</div>-->
+<br />
+<br />
+<br />
+<div class="card" id="placement">
+  <div class="card-body">
+		<div class="row">
+			<!--<div class="col-md-3"></div>-->
+			
+			<div class="col-md-6">
+			  <h3>Companies visiting trends</h3>
+			  <canvas id="lineChart"></canvas>
+			</div>
+			<div class="col-md-6">
+			<center>
+			  <h1>Analysis for Placements:</h1>
+			  <p style="margin-top:2%"> This year saw a steep rise in the number of companies overall. The companies started coming in later than expected this year. Numbers in april were almost double the ones experienced last year. The numbers started peaking post april. Maximum companies visited the college in July. </p>
+			 </center>
+			</div>
+			<!--<div class="col-md-3"></div>-->
+		</div>
+  </div>
+</div>
+<!--<div class="row" style="margin-top:3%">
+	<div class="col-md-3"></div>
+	<div class="col-md-6">
+	  <h3>Companies visiting trends</h3>
+	  <canvas id="lineChart"></canvas>
+	</div>
+	<div class="col-md-3"></div>
+</div>-->
+<br />
+<br />
+<br />
+<div class="card" id="results">
+  <div class="card-body">
+		<div class="row">
+			<!--<div class="col-md-3"></div>-->
+			<div class="col-md-6">
+			<center>
+			  <h1>Analysis for Results:</h1>
+			  <p style="margin-top:2%"> As expected many types of companies visited the campus. FinTech compaies offered the most jobs with a staggering 40+% of the overall placments. This year the services sector share reduced by 5%. But the product companies were more enthusiastic as they boosted their hiring by 20%. Students seems happy and content with their choices and placements this year. </p>
+			 </center>
+			</div>
+			<div class="col-md-6">
+			<center>
+			  <h3>Distribution according to type</h3>
+			  </center>
+			  <canvas id="pieChart"></canvas>
+			</div>
+			<!--<div class="col-md-3"></div>-->
+		</div>
+  </div>
+</div>
+<!--<div class="row" style="margin-top:3%">
+	<div class="col-md-3"></div>
+	<div class="col-md-6">
+	<h3>Placement results: Distribution according to type</h3>
+	  <canvas id="pieChart"></canvas>
+	</div>
+	<div class="col-md-3"></div>
+</div>-->
+</div>
+</body>
+<script>
+$('.count').each(function () {
+    $(this).prop('Counter',0).animate({
+        Counter: $(this).text()
+    }, {
+        duration: 4000,
+        easing: 'swing',
+        step: function (now) {
+            $(this).text(Math.ceil(now));
+        }
+    });
+});
+/* Set the width of the side navigation to 250px */
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+}
+
+/* Set the width of the side navigation to 0 */
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+} 
+</script>
+<script>
+  //line
+var ctxL = document.getElementById("lineChart").getContext('2d');
+var myLineChart = new Chart(ctxL, {
+type: 'line',
+data: {
+labels: ["January", "February", "March", "April", "May", "June", "July"],
+datasets: [{
+label: "2020",
+data: [5, 10, 15, 8, 16, 35, 60],
+backgroundColor: [
+'rgba(105, 0, 132, .2)',
+],
+borderColor: [
+'rgba(200, 99, 132, .7)',
+],
+borderWidth: 2
+},
+{
+label: "2021",
+data: [8, 0, 10, 29, 6, 27, 90],
+backgroundColor: [
+'rgba(0, 137, 132, .2)',
+],
+borderColor: [
+'rgba(0, 10, 130, .7)',
+],
+borderWidth: 2
+}
+]
+},
+options: {
+responsive: true
+}
+});
+</script>
+<script>
+   var ctx = document.getElementById("myChart").getContext('2d');
+var myChart = new Chart(ctx, {
+type: 'bar',
+data: {
+labels: ["CS", "IT", "Mechanical", "ENTC", "Civil"],
+datasets: [{
+label: '# of Admissions',
+data: [500, 300, 400, 200, 100	],
+backgroundColor: [
+'rgba(255, 99, 132, 0.2)',
+'rgba(54, 162, 235, 0.2)',
+'rgba(255, 206, 86, 0.2)',
+'rgba(75, 192, 192, 0.2)',
+'rgba(153, 102, 255, 0.2)'
+],
+borderColor: [
+'rgba(255,99,132,1)',
+'rgba(54, 162, 235, 1)',
+'rgba(255, 206, 86, 1)',
+'rgba(75, 192, 192, 1)',
+'rgba(153, 102, 255, 1)'
+],
+borderWidth: 1
+}]
+},
+options: {
+scales: {
+yAxes: [{
+ticks: {
+beginAtZero: true
+}
+}]
+}
+}
+});
+</script>
+<script>
+var ctxP = document.getElementById("pieChart").getContext('2d');
+var myPieChart = new Chart(ctxP, {
+type: 'pie',
+data: {
+labels: ["FinTech", "Startup", "Product", "Services", "Banking"],
+datasets: [{
+data: [300, 50, 70, 140, 120],
+backgroundColor: ["#F7464A", "#46BFBD", "#FDB45C", "#949FB1", "#4D5360"],
+hoverBackgroundColor: ["#FF5A5E", "#5AD3D1", "#FFC870", "#A8B3C5", "#616774"]
+}]
+},
+options: {
+responsive: true
+}
+});
+</script>
+</html>
